@@ -4,4 +4,8 @@
         <attribute name="clave" optional="YES" attributeType="String"/>
         <attribute name="respuesta" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="ReceivedData" representedClassName="ReceivedData" syncable="YES">
+        <attribute name="clave" optional="YES" attributeType="String"/>
+        <attribute name="respuesta" optional="YES" attributeType="String"/>
+    </entity>
 </model>

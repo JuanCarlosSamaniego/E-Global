@@ -11,8 +11,8 @@
 		7D97F46E29C39BB900112436 /* DetailDataReceivedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97F46C29C39BB900112436 /* DetailDataReceivedViewController.swift */; };
 		7D97F46F29C39BB900112436 /* DetailDataReceivedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D97F46D29C39BB900112436 /* DetailDataReceivedViewController.xib */; };
 		7D97F47229C39DAF00112436 /* DataModelReceived.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D97F47029C39DAF00112436 /* DataModelReceived.xcdatamodeld */; };
-		7D97F47529C3A02300112436 /* DataReceived+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97F47329C3A02200112436 /* DataReceived+CoreDataClass.swift */; };
-		7D97F47629C3A02300112436 /* DataReceived+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97F47429C3A02300112436 /* DataReceived+CoreDataProperties.swift */; };
+		7D97F47929C3CE8600112436 /* ReceivedData+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97F47729C3CE8500112436 /* ReceivedData+CoreDataProperties copy.swift */; };
+		7D97F47A29C3CE8600112436 /* ReceivedData+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97F47829C3CE8600112436 /* ReceivedData+CoreDataClass copy.swift */; };
 		7D9BA75029C2AA2D004CCD33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9BA74F29C2AA2D004CCD33 /* AppDelegate.swift */; };
 		7D9BA75229C2AA2D004CCD33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9BA75129C2AA2D004CCD33 /* SceneDelegate.swift */; };
 		7D9BA75429C2AA2D004CCD33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9BA75329C2AA2D004CCD33 /* ViewController.swift */; };
@@ -35,8 +35,8 @@
 		7D97F46C29C39BB900112436 /* DetailDataReceivedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataReceivedViewController.swift; sourceTree = "<group>"; };
 		7D97F46D29C39BB900112436 /* DetailDataReceivedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailDataReceivedViewController.xib; sourceTree = "<group>"; };
 		7D97F47129C39DAF00112436 /* DataModelReceived.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModelReceived.xcdatamodel; sourceTree = "<group>"; };
-		7D97F47329C3A02200112436 /* DataReceived+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataReceived+CoreDataClass.swift"; sourceTree = "<group>"; };
-		7D97F47429C3A02300112436 /* DataReceived+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataReceived+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7D97F47729C3CE8500112436 /* ReceivedData+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReceivedData+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
+		7D97F47829C3CE8600112436 /* ReceivedData+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReceivedData+CoreDataClass copy.swift"; sourceTree = "<group>"; };
 		7D9BA74C29C2AA2D004CCD33 /* E-Global.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-Global.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9BA74F29C2AA2D004CCD33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D9BA75129C2AA2D004CCD33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +86,8 @@
 		7D9BA74329C2AA2C004CCD33 = {
 			isa = PBXGroup;
 			children = (
+				7D97F47729C3CE8500112436 /* ReceivedData+CoreDataProperties copy.swift */,
+				7D97F47829C3CE8600112436 /* ReceivedData+CoreDataClass copy.swift */,
 				7D9BA74E29C2AA2D004CCD33 /* E-Global */,
 				7D9BA74D29C2AA2D004CCD33 /* Products */,
 				4F0C59DA57664DA9D90AAB13 /* Pods */,
@@ -116,8 +118,6 @@
 				7D9BA75829C2AA34004CCD33 /* Assets.xcassets */,
 				7D9BA75A29C2AA34004CCD33 /* LaunchScreen.storyboard */,
 				7D9BA75D29C2AA34004CCD33 /* Info.plist */,
-				7D97F47329C3A02200112436 /* DataReceived+CoreDataClass.swift */,
-				7D97F47429C3A02300112436 /* DataReceived+CoreDataProperties.swift */,
 				7D97F47029C39DAF00112436 /* DataModelReceived.xcdatamodeld */,
 			);
 			path = "E-Global";
@@ -288,12 +288,12 @@
 			files = (
 				7D9BA77429C2F1B7004CCD33 /* SendDataViewController.swift in Sources */,
 				7D9BA75429C2AA2D004CCD33 /* ViewController.swift in Sources */,
-				7D97F47529C3A02300112436 /* DataReceived+CoreDataClass.swift in Sources */,
 				7D9BA75029C2AA2D004CCD33 /* AppDelegate.swift in Sources */,
 				7D97F47229C39DAF00112436 /* DataModelReceived.xcdatamodeld in Sources */,
-				7D97F47629C3A02300112436 /* DataReceived+CoreDataProperties.swift in Sources */,
+				7D97F47A29C3CE8600112436 /* ReceivedData+CoreDataClass copy.swift in Sources */,
 				7D9BA75229C2AA2D004CCD33 /* SceneDelegate.swift in Sources */,
 				7D97F46E29C39BB900112436 /* DetailDataReceivedViewController.swift in Sources */,
+				7D97F47929C3CE8600112436 /* ReceivedData+CoreDataProperties copy.swift in Sources */,
 				7D9BA76C29C2CA07004CCD33 /* LoginViewController.swift in Sources */,
 				7D9BA76829C2B691004CCD33 /* HomeViewController.swift in Sources */,
 				7D9BA76F29C2EAE7004CCD33 /* SwiftUtils.swift in Sources */,

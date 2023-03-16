@@ -13,8 +13,8 @@ class DetailDataReceivedViewController: UIViewController {
     @IBOutlet weak var tableViewDataReceived: UITableView!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
-    var dataReceived: [DataReceived] = []
+    
+    var dataReceivedArray: [ReceivedData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,16 +22,16 @@ class DetailDataReceivedViewController: UIViewController {
     }
     
     func setupView() {
-        
         setupTableViewForDataReceived()
+        getAllDataReceived()
     }
 }
 
 extension DetailDataReceivedViewController {
     // MARK: - CoreData
-    func getAllGoals() {
+    func getAllDataReceived() {
         do {
-            dataReceived = try context.fetch(DataReceived.fetchRequest())
+            dataReceivedArray = try context.fetch(ReceivedData.fetchRequest())
             DispatchQueue.main.async {
                 self.tableViewDataReceived.reloadData()
             }
@@ -39,49 +39,44 @@ extension DetailDataReceivedViewController {
         catch {}
     }
     
-    /// Crear un folio compartido por algun usuario.
-    func createNewGoal(titleGoals: String) {
-        let newitem = DataReceived(context: context)
-        newitem.respuesta = titleGoals
-        newitem.clave = ""
+    func createdataReceived(clave: String, respuesta: String) {
+        let newItem = ReceivedData(context: context)
+        newItem.clave = clave
+        newItem.respuesta = respuesta
         do {
             try context.save()
             self.tableViewDataReceived.reloadData()
-        }
-        catch{ }
+        } catch { print("error") }
     }
-    /// Permite eliminar un folio de la lista de folios.
-    func deleteFolioPorCompartir(folio: DataReceived  ) {
-        context.delete(folio)
+    
+    func deleteItemDataReceived(id: ReceivedData  ) {
+        context.delete(id)
         do {
             try context.save()
-            getAllGoals()
+            getAllDataReceived()
         }
-        catch {}
+        catch { }
     }
 }
-
 
 extension DetailDataReceivedViewController: UITableViewDelegate, UITableViewDataSource {
     func setupTableViewForDataReceived() {
         tableViewDataReceived.delegate = self
         tableViewDataReceived.dataSource = self
     }
-   
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return dataReceivedArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell=UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "mycell")
-             //  let data = filterData[indexPath.row]
-               cell.textLabel?.text = "respuesta"
-               cell.detailTextLabel?.text = "clave"
-               cell.imageView?.image = UIImage(systemName: "square.and.arrow.down.on.square")
-               cell.textLabel?.font = UIFont.preferredFont(forTextStyle: .headline).withSize(18)
-               return cell
+        let dataModel = dataReceivedArray[indexPath.row]
+        cell.textLabel?.text = dataModel.respuesta
+        cell.detailTextLabel?.text = dataModel.clave
+        cell.imageView?.image = UIImage(systemName: "square.and.arrow.down.on.square")
+        cell.textLabel?.font = UIFont.preferredFont(forTextStyle: .headline).withSize(18)
+        return cell
     }
-    
-    
 }
 

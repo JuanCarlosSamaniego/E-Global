@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:DataReceived+CoreDataClass.swift">
+      location = "group:ReceivedData+CoreDataClass.swift">
    </FileRef>
    <FileRef
-      location = "group:DataReceived+CoreDataProperties.swift">
+      location = "group:ReceivedData+CoreDataProperties.swift">
    </FileRef>
    <FileRef
       location = "group:E-Global.xcodeproj">
